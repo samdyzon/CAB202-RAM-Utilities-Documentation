@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.1.2"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <title>Teensy_Graphics - RAM Utils - Copyright &copy; 2015 - Queensland University of Technology: File Members</title>
+        <title>Teensy_Graphics - RAM Utils - Copyright &copy; 2015 - Queensland University of Technology: ram.h Source File</title>
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -66,14 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li class="current"><a href="globals.html"><span>File&#160;Members</span></a></li>
-    </ul>
-  </div>
-  <div id="navrow3" class="tabs2">
-    <ul class="tablist">
-      <li><a href="globals.html"><span>All</span></a></li>
-      <li><a href="globals_func.html"><span>Functions</span></a></li>
-      <li class="current"><a href="globals_defs.html"><span>Macros</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,13 +84,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div class="header">
+  <div class="headertitle">
+<div class="title">ram.h</div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>RAM_GUARD
-: <a class="el" href="ram_8h.html#a9f33e9aa101b20cf21ed92584f4a1d72">ram.h</a>
-</li>
-</ul>
-</div><!-- contents -->
+<a href="ram_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RAM_UTILS_H_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RAM_UTILS_H_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;avr/io.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;avr/pgmspace.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef RAM_GUARD </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="ram_8h.html#a9f33e9aa101b20cf21ed92584f4a1d72">   19</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">        #define RAM_GUARD 100 </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">int</span> estimate_alloc(<span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">int</span> estimate_ram();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* load_rom_bitmap(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* source, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* load_rom_string(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* source);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RAM_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
